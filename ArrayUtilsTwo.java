@@ -3,28 +3,36 @@ import java.util.Arrays;
 public class ArrayUtilsTwo{
 	//1.计算数组中最大值
     public static int arrayMaxElement(int[] data){
-        for(int i=0;i<data.length-1;i++){
-			if(data[i]>data[i+1]){
+		int[] data1=new int[data.length];
+		for(int j=0;j<data1.length;j++){
+			data1[j]=data[j];
+		}
+        for(int i=0;i<data1.length-1;i++){
+			if(data1[i]>data1[i+1]){
 				int a=0;
-				a=data[i];
-				data[i]=data[i+1];
-				data[i+1]=a;
+				a=data1[i];
+				data1[i]=data1[i+1];
+				data1[i+1]=a;
 			}
 		}
-        return data[data.length-1];
+        return data1[data1.length-1];
     }
     
     //2.计算数组中最小值
     public static int arrayMinElement(int[] data){
-        for(int i=0;i<data.length-1;i++){
-			if(data[i]<data[i+1]){
+		int[] data1=new int[data.length];
+		for(int j=0;j<data1.length;j++){
+			data1[j]=data[j];
+		}
+        for(int i=0;i<data1.length-1;i++){
+			if(data1[i]<data1[i+1]){
 				int a=0;
-				a=data[i];
-				data[i]=data[i+1];
-				data[i+1]=a;
+				a=data1[i];
+				data1[i]=data1[i+1];
+				data1[i+1]=a;
 			}
 		}
-        return data[0];
+        return data1[0];
     }
 	//3.数组求和
 	public static int arrayElement(int [] data){
